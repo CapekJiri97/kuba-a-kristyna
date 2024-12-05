@@ -1,0 +1,162 @@
+* {
+    margin: 0;
+    padding: 0;
+
+}
+
+body {
+    font-family: 'Bricolage Grotesque', sans-serif; /* Použití fontu Bricolage Grotesk */
+    background-image: url('pozadi.png'); /* Přidání obrázku pozadí */
+    background-size: cover;  /* Pokryje celé pozadí obrazovky */
+    background-position: center; /* Umístí pozadí na střed */
+    background-repeat: no-repeat; /* Zabráni opakování obrázku */
+    background-attachment: fixed; /* Pozadí se posouvá s obsahem */
+}
+
+header {
+    text-align: center;
+}
+
+.navbar {
+    
+    background: linear-gradient(90deg, rgba(255,255,255,0.5) 0%, rgba(255,255,255,0.75) 35%, rgba(255,255,255,0.99) 100%);
+ 
+    padding: 24px;
+    position: sticky;
+    top: 0;
+    width: 100%;
+
+    overflow-x: auto;  /* Přidáme horizontální scroll pro mobilní verzi */
+    white-space: nowrap;  /* Zajistí, že odkazy budou v řadě */
+}
+.navbar ul {
+    list-style: none;
+    display: flex;
+    justify-content: center; /* Horizontální zarovnání na střed */
+    align-items: center; /* Vertikální zarovnání na střed */
+    gap: 24px;
+    padding: 8px;
+}
+
+.navbar a {
+    text-decoration: none;
+    color: #333;
+    font-weight: bold;
+    padding: 12px;
+}
+
+.logo{
+    font-family: 'Roboto Mono', monospace;
+        text-decoration: none;
+        color: #0f0f0f;
+        font-weight:900;
+        padding: 4px;
+        font-size: 20px; 
+}
+
+.navbar a:hover {
+    color: #0066cc;
+}
+
+.intro-photo {
+    width: 100%;
+    height: 90vh;
+    object-fit: cover;
+  
+}
+
+.container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 90%; /* Na mobilu vyplňuje 90% šířky */
+    margin: 0 auto;
+    padding-top: 20px;
+}
+
+.box {
+    background: linear-gradient(90deg, rgba(255,255,255,0.1) 0%, rgba(255,255,255,0.35) 35%, rgba(255,255,255,0.89) 100%); /* průsvitná bílá */
+    border-radius: 7px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    margin: 15px 0;
+    padding: 24px;
+    width: 100%;
+    max-width: 800px; /* Maximální šířka boxu */
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+
+
+p {
+    color: #555;
+}
+
+.images {
+    display: flex;
+    justify-content: center;
+    gap: 10px;
+    flex-wrap: wrap;
+}
+
+.lokalita-img {
+    width: 100%;
+    max-width: 400px;
+    height: auto;
+    border-radius: 10px;
+    aspect-ratio: 4 / 3; /* Nastaví poměr stran 4:3 */
+    object-fit: cover; /* Pokud obrázek není ve formátu 4:3, bude oříznut */
+}
+
+/* Umístí progress bar na horní část stránky pod navbar */
+.progress-container {
+    width: 100%;
+    height: 4px;
+    position: fixed; /* nebo 'sticky' podle potřeby */
+    top: 83px; /* nebo výška vašeho navbaru */
+    left: 0;
+    background: #ccc;
+    z-index: 1; /* Ujistěte se, že je nad ostatními prvky */
+}
+
+.progress-bar {
+    height: 4px;
+    background: #74a4d1; /* Změňte barvu podle potřeby */
+    width: 0%;
+}
+
+
+
+/* Mobile first */
+@media (min-width: 600px) {
+    .container {
+        width: 90%; /* stále 90% šířky */
+    }
+   
+}
+
+@media (min-width: 900px) {
+    .container {
+        width: 75%; /* Na desktopu 75% šířky */
+    }
+}
+
+/* Responzivní navbar pro malé obrazovky */
+@media (max-width: 600px) {
+    .navbar ul {
+        flex-direction: row;  /* Odkazy budou v řadě */
+        padding: 0 10px;
+    }
+
+    .navbar li {
+        gap: 12px;  /* Odkazy nebudou zhušťovány */
+    }
+
+    .navbar a {
+        padding: 10px 15px; /* Zvýšíme klikací plochu */
+    } 
+    .progress-container {
+
+        top: 71px; /* nebo výška vašeho navbaru */}
+}

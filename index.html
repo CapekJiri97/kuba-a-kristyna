@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="cs">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Svatební Web</title>
+    <link href="https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto+Mono&display=swap" rel="stylesheet">
+
+    <link href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesk&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  
+        <nav class="navbar">
+            <ul>
+                <li><a class="logo">Kuba a Kristýna</a></li>
+                <li><a href="#lokalita">Lokalita</a></li>
+                <li><a href="#svatebni-den">Svatební Den</a></li>
+                <li><a href="#ubytovani">Ubytování</a></li>
+                <li><a href="#etiketa">Dresscode</a></li>
+                <li><a href="#kontakty">Kontakty</a></li>
+            </ul>
+        </nav>
+        <img src="svatebni-foto.png" alt="Úvodní foto" class="intro-photo">
+
+    
+            <!-- Progress bar container -->
+        <div class="progress-container">
+            <div class="progress-bar" id="myBar"></div>
+        </div>
+        
+    <div class="container">
+        <section class="box" id="lokalita">
+            <h2>Lokalita</h2>
+            <p>• Sv. Ján může zůstat, jen se změní datum na 14.6.2024, čas může zůstat.</p>
+            <p>• Druhá mapa bude Fořtovna a popis, že se tam přesuneme po obřadu.</p>
+            <div class="images">
+                <img src="svatebni-mapa1.jpg" alt="Mapa Sv. Ján" class="lokalita-img">
+             
+            </div>
+            <p>• Ještě nemáme vyřešený, jak to bude před obřadem – to se dodá.</p>
+            <p>• Možná bychom tam dali nějaký proklik na <a href="https://mapy.cz" target="_blank">mapy.cz</a>, jestli to jde?</p>
+            <div class="images">
+                <img src="svatebni-mapa2.jpg" alt="Mapa Fořtovna" class="lokalita-img">
+            </div>
+        </section>
+        
+        <section class="box" id="svatebni-den">
+            <h2>Svatební Den</h2>
+            <p>Infografiku tu zatím nedáváme, doplní se na jaře.</p>
+        </section>
+        
+        <section class="box" id="ubytovani">
+            <h2>Ubytování</h2>
+            <p>Víceméně bude platit, doplníme, že bude pro rodinu a rodinné přátele a že se dá domluvit s námi bud pension v Cerhonicích nebo něco dalšího.</p>
+            <div class="images">
+                <img src="ubytovani.jpg" alt="Mapa Sv. Ján" class="lokalita-img">
+             
+            </div>
+            <p>Plus že tam bude místo na pár stanů.</p>
+        </section>
+        
+        <section class="box" id="etiketa">
+            <h2>Dresscode</h2>
+            <p>Tohle je super, jen bychom si to asi trochu přepsali pro nás a přejmenovali na dresscode. Plus bychom tam asi připsali dvě větičky k darům, že nejvíc oceníme peníze.</p>
+        </section>
+        
+        <section class="box" id="kontakty">
+            <h2>Svědkové</h2>
+            <p>borci</p>
+        </section>
+    </div>
+</body>
+<script>
+    window.onscroll = function() {myFunction()};
+
+function myFunction() {
+  var winScroll = document.body.scrollTop || document.documentElement.scrollTop;
+  var height = document.documentElement.scrollHeight - document.documentElement.clientHeight;
+  var scrolled = (winScroll / height) * 100;
+  document.getElementById("myBar").style.width = scrolled + "%";
+}
+
+
+</script>
+</html>
