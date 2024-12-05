@@ -26,14 +26,14 @@ header {
     top: 0;
     width: 100%;
 
-    overflow-x: auto;  /* Přidáme horizontální scroll pro mobilní verzi */
+    overflow-x:auto;  /* Přidáme horizontální scroll pro mobilní verzi */
     white-space: nowrap;  /* Zajistí, že odkazy budou v řadě */
 }
 .navbar ul {
     list-style: none;
     display: flex;
     justify-content: center; /* Horizontální zarovnání na střed */
-    align-items: center; /* Vertikální zarovnání na střed */
+    align-items:flex-end; /* Vertikální zarovnání na střed */
     gap: 24px;
     padding: 8px;
 }
@@ -69,7 +69,7 @@ header {
     display: flex;
     flex-direction: column;
     align-items: center;
-    width: 90%; /* Na mobilu vyplňuje 90% šířky */
+    width: 80%; /* Na mobilu vyplňuje 90% šířky */
     margin: 0 auto;
     padding-top: 20px;
 }
@@ -144,18 +144,26 @@ p {
 
 /* Responzivní navbar pro malé obrazovky */
 @media (max-width: 600px) {
+    body {
+        overflow-x:unset;  /* Zabrání horizontálnímu scrollování */
+    }
+    .navbar{
+        padding-right: 0px;  
+         width: 94%;
+    }
+
     .navbar ul {
         flex-direction: row;  /* Odkazy budou v řadě */
+        justify-content: flex-start;  /* Odkazy začnou zleva */
         padding: 0 10px;
+    
+        box-sizing: border-box; /* Aby padding nezvětšil šířku */
     }
 
     .navbar li {
-        gap: 12px;  /* Odkazy nebudou zhušťovány */
+        margin-right: 12px;  /* Přidáme mezeru mezi odkazy */
     }
-
-    .navbar a {
-        padding: 10px 15px; /* Zvýšíme klikací plochu */
-    } 
+   
     .progress-container {
 
         top: 71px; /* nebo výška vašeho navbaru */}
