@@ -257,11 +257,24 @@ p {
     }
     .bird {
         position: absolute;
-        width: 20px; /* Adjust size */
+        width: 40px; /* Adjust size */
         height: auto;
         z-index: -4; /* Place behind content */
         opacity: 0.75; /* Slight transparency */
         pointer-events: none; /* Make birds unclickable */
     }
+    .intro-text {
+        position: absolute;
+        bottom: 20%; /* Positions text in the bottom 30% (90vh * 0.3 = 27vh, so ~15% from bottom) */
+        left: 50%;
+        transform: translate(-50%, 50%); /* Centers text horizontally and adjusts vertical alignment */
+        color: white; /* Ensure text is visible on the image */
+        font-size: 1rem; /* Adjust font size as needed */
+        font-family: 'Roboto Mono', monospace;
+       
+    
+        text-align: center;
+    }
+    
     
 }
