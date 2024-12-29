@@ -25,10 +25,16 @@ header {
     position: sticky;
     top: 0;
     width: 100%;
-
+    z-index: 1;
     overflow-x:auto;  /* Přidáme horizontální scroll pro mobilní verzi */
     white-space: nowrap;  /* Zajistí, že odkazy budou v řadě */
 }
+
+.navbar a:focus {
+    outline: 2px solid #0066cc;
+    outline-offset: 2px;
+}
+
 .navbar ul {
     list-style: none;
     display: flex;
@@ -56,6 +62,23 @@ header {
 
 .navbar a:hover {
     color: #0066cc;
+}
+.intro-photo-container {
+    position: relative; /* Creates a positioning context for the text */
+    width: 100%;
+    height: 90vh;
+}
+.intro-text {
+    position: absolute;
+    bottom: 25%; /* Positions text in the bottom 30% (90vh * 0.3 = 27vh, so ~15% from bottom) */
+    left: 50%;
+    transform: translate(-50%, 50%); /* Centers text horizontally and adjusts vertical alignment */
+    color: white; /* Ensure text is visible on the image */
+    font-size: 3rem; /* Adjust font size as needed */
+    font-family: 'Roboto Mono', monospace;
+   
+
+    text-align: center;
 }
 
 .intro-photo {
@@ -124,6 +147,7 @@ p {
     height: 4px;
     background: #74a4d1; /* Změňte barvu podle potřeby */
     width: 0%;
+    transition: width 0.2s ease-in-out;
 }
 
 
@@ -167,4 +191,77 @@ p {
     .progress-container {
 
         top: 71px; /* nebo výška vašeho navbaru */}
+}
+
+
+
+/* Gallery Flexbox */
+.gallery {
+    display: flex;
+    flex-direction: column; /* Arranges rows vertically */
+    gap: 20px; /* Space between rows */
+}
+
+/* Flexbox for Rows */
+.row {
+    display: flex;
+    justify-content: center; /* Centers the photos horizontally */
+    gap: 20px; /* Space between photos in the same row */
+}
+
+/* Photo Styling */
+.photo-container {
+    width: 250px;height: 250px;
+ 
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 2vh;
+    border-radius: 2px; 
+    border: 1px solid black; /* Black bottom border */
+    overflow: hidden; /* Prevents image overflow */
+}
+
+.photo-container img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover; /* Ensures the image fits without distortion */
+    border-radius: 2px; /* Optional: Slightly rounded corners */
+}
+
+.bird {
+    position: absolute;
+    width: 40px; /* Adjust size */
+    height: auto;
+    z-index: -4; /* Place behind content */
+    opacity: 0.75; /* Slight transparency */
+    pointer-events: none; /* Make birds unclickable */
+}
+
+
+/* Media Query for Small Screens */
+@media (max-width: 768px) {
+    .gallery {
+        flex-direction: column; /* Stack all rows vertically */
+        gap: 20px; /* Space between photos */
+    }
+
+    .row {
+        flex-direction: column; /* All photos stacked vertically */
+        align-items: center; /* Center photos within each row */
+    }
+
+    .photo-container {
+        width: 200px; /* Fixed width */
+        height: 200px; /* Fixed height to ensure all photos are 200x200px */
+    }
+    .bird {
+        position: absolute;
+        width: 20px; /* Adjust size */
+        height: auto;
+        z-index: -4; /* Place behind content */
+        opacity: 0.75; /* Slight transparency */
+        pointer-events: none; /* Make birds unclickable */
+    }
+    
 }

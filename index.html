@@ -22,7 +22,13 @@
                 <li><a href="#kontakty">Kontakty</a></li>
             </ul>
         </nav>
-        <img src="svatebni-foto.png" alt="Úvodní foto" class="intro-photo">
+        <div class="intro-photo-container">
+            <img src="svatebni-foto.jpg" alt="Úvodní foto" class="intro-photo">
+            <div class="intro-text">Budeme se brát! A rádi Vás u toho budeme mít! <br>
+                Sobota 14. 6. 2025
+                </div>
+        </div>
+        
 
     
             <!-- Progress bar container -->
@@ -33,14 +39,15 @@
     <div class="container">
         <section class="box" id="lokalita">
             <h2>Lokalita</h2>
-            <p>• Sv. Ján může zůstat, jen se změní datum na 14.6.2024, čas může zůstat.</p>
-            <p>• Druhá mapa bude Fořtovna a popis, že se tam přesuneme po obřadu.</p>
+            <p>• Obřad proběhne v kostele u Sv. Jana Křtitele v Květově od 11.30 (proklik na mapy).
+            </p>
+            <p>• Hostina bude v Penzionu Fořtovna, Cerhonice. Sem se společně přesuneme auty po obřadu. Cesta zabere asi 15 minut. Penzion samotný je pak ani ne hodinu cesty autem od Prahy, po nově dostavěné dálnici D4.</p>
             <div class="images">
                 <img src="svatebni-mapa1.jpg" alt="Mapa Sv. Ján" class="lokalita-img">
              
             </div>
-            <p>• Ještě nemáme vyřešený, jak to bude před obřadem – to se dodá.</p>
-            <p>• Možná bychom tam dali nějaký proklik na <a href="https://mapy.cz" target="_blank">mapy.cz</a>, jestli to jde?</p>
+           
+            <p>• Pro přesuny je potřeba mít auto nebo se v několika lidech do auta poskládat. Pokud nemáte k dispozici auto, nebo není ve vašich silách si zajistit odvoz, dejte nám vědět a my Vás s někým spojíme. </p>
             <div class="images">
                 <img src="svatebni-mapa2.jpg" alt="Mapa Fořtovna" class="lokalita-img">
             </div>
@@ -48,28 +55,58 @@
         
         <section class="box" id="svatebni-den">
             <h2>Svatební Den</h2>
-            <p>Infografiku tu zatím nedáváme, doplní se na jaře.</p>
+            <p>Brzy přidáme :)</p>
         </section>
         
         <section class="box" id="ubytovani">
             <h2>Ubytování</h2>
-            <p>Víceméně bude platit, doplníme, že bude pro rodinu a rodinné přátele a že se dá domluvit s námi bud pension v Cerhonicích nebo něco dalšího.</p>
+            <p>V samotném penzionu je ubytovaná nejbližší rodina a rodinní přátelé. Po dohodě je možné postavit na zahradě vlastní stan. V Cerhonicích je pak také možnost dalšího ubytování v penzionu Furiant po dohodě s námi. Další ubytování je možné hledat v okolí: Zvíkovské Podhradí a Písek. Neměl by být problém dopravit se případně na ubytování taxíkem.</p>
             <div class="images">
                 <img src="ubytovani.jpg" alt="Mapa Sv. Ján" class="lokalita-img">
              
             </div>
-            <p>Plus že tam bude místo na pár stanů.</p>
+          
         </section>
         
         <section class="box" id="etiketa">
             <h2>Dresscode</h2>
-            <p>Tohle je super, jen bychom si to asi trochu přepsali pro nás a přejmenovali na dresscode. Plus bychom tam asi připsali dvě větičky k darům, že nejvíc oceníme peníze.</p>
+            <p>Obřad proběhne v kostele, proto prosím buďte oblečení ve slavnostním formálním oblečení. Zvolte něco, v čem se cítíte krásně a pohodlně. Následná hostina a program bude na zahradě penzionu, kam už můžete volit něco méně formálního. Pro ženy doporučujeme na hostinu spíše tenisky nebo žabky. Nebude tam pevný terén, takže v případě horšího počasí (na které snad nedojde) doporučujeme přibalit i holínky nebo podobnou obuv. Během obřadu prosím vypněte své mobilní telefony a nefotografujte. Vše zaznamená náš fotograf.</p>
+        </section>
+        <section class="box" id="etiketa">
+            <h2>Svatební dary</h2>
+            <p>Pokud byste nás chtěli poctít svatebním darem, můžete nás obdarovat drobným finančním příspěvkem. Největší radost nám však udělá, když tento svatební den budeme spolu.</p>
+        </section>
+       
+
+
+        <section class="box">
+            <h2> My dva</h2>
+          
+            <div class="gallery">
+                <div class="row">
+                    <div class="photo-container">
+                        <img src="photo1.png" alt="Photo 1">
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="photo-container">
+                        <img src="photo2.png" alt="Photo 2">
+                    </div>
+                    <div class="photo-container">
+                        <img src="photo3.png" alt="Photo 3">
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="photo-container">
+                        <img src="photo4.png" alt="Photo 4">
+                    </div>
+                </div>
+            </div>
         </section>
         
-        <section class="box" id="kontakty">
-            <h2>Svědkové</h2>
-            <p>borci</p>
-        </section>
+        
+
+
     </div>
 </body>
 <script>
@@ -82,6 +119,42 @@ function myFunction() {
   document.getElementById("myBar").style.width = scrolled + "%";
 }
 
+
+
+const birdImages = [
+            'bird1.png', // Path to your first bird image
+            'bird2.png', // Path to your second bird image
+            'bird3.png',
+            'bird4.png',
+            'bird5.png',
+            'bird6.png'  // Path to your third bird image
+        ];
+
+        function addRandomBirds() {
+    const container = document.body; // Add birds across the whole page
+    const birdCount = 50; // Number of birds
+
+    // Get the full height and width of the document
+    const pageHeight = document.documentElement.scrollHeight;
+    const pageWidth = document.documentElement.scrollWidth;
+
+    for (let i = 0; i < birdCount; i++) {
+        const bird = document.createElement('img');
+        bird.src = birdImages[Math.floor(Math.random() * birdImages.length)];
+        bird.classList.add('bird');
+
+        // Randomize positions based on the full page dimensions
+        const randomTop = Math.random() * pageHeight;
+        const randomLeft = Math.random() * pageWidth;
+
+        bird.style.top = `${randomTop}px`;
+        bird.style.left = `${randomLeft}px`;
+
+        container.appendChild(bird);
+    }
+}
+
+window.onload = addRandomBirds;
 
 </script>
 </html>
