@@ -1,16 +1,17 @@
+@import url('https://fonts.googleapis.com/css2?family=Dancing+Script:wght@400;700&display=swap');
 * {
     margin: 0;
     padding: 0;
 
 }
 
+h2 {
+    font-family: 'Dancing Script', cursive;
+    font-size: 3.3vh;
+}
 body {
-    font-family: 'Bricolage Grotesque', sans-serif; /* Použití fontu Bricolage Grotesk */
-    background-image: url('pozadi.png'); /* Přidání obrázku pozadí */
-    background-size: cover;  /* Pokryje celé pozadí obrazovky */
-    background-position: center; /* Umístí pozadí na střed */
-    background-repeat: no-repeat; /* Zabráni opakování obrázku */
-    background-attachment: fixed; /* Pozadí se posouvá s obsahem */
+    font-family: 'Bricolage Grotesque', sans-serif; /* Použití fontu Bricolage Grotesk */  /* font-family: 'Dancing Script', cursive; */
+    background-color: #f7fdff;
 }
 
 header {
@@ -19,9 +20,9 @@ header {
 
 .navbar {
     
-    background: linear-gradient(90deg, rgba(255,255,255,0.5) 0%, rgba(255,255,255,0.75) 35%, rgba(255,255,255,0.99) 100%);
+    background: linear-gradient(90deg, rgba(255, 255, 255, 0.781) 0%, rgba(255, 255, 255, 0.842) 35%, rgba(255,255,255,0.99) 100%);
  
-    padding: 24px;
+    padding: 1vh;
     position: sticky;
     top: 0;
     width: 100%;
@@ -33,6 +34,7 @@ header {
 .navbar a:focus {
     outline: 2px solid #0066cc;
     outline-offset: 2px;
+    position: sticky;
 }
 
 .navbar ul {
@@ -52,12 +54,12 @@ header {
 }
 
 .logo{
-    font-family: 'Roboto Mono', monospace;
+    font-family: 'Dancing Script', cursive;
         text-decoration: none;
         color: #0f0f0f;
         font-weight:900;
         padding: 4px;
-        font-size: 20px; 
+        font-size: 4vh; 
 }
 
 .navbar a:hover {
@@ -74,9 +76,8 @@ header {
     left: 50%;
     transform: translate(-50%, 50%); /* Centers text horizontally and adjusts vertical alignment */
     color: white; /* Ensure text is visible on the image */
-    font-size: 3rem; /* Adjust font size as needed */
-    font-family: 'Roboto Mono', monospace;
-   
+    font-size: 4vh; /* Adjust font size as needed */
+    font-family: 'Dancing Script', cursive;
 
     text-align: center;
 }
@@ -98,9 +99,8 @@ header {
 }
 
 .box {
-    background: linear-gradient(90deg, rgba(255,255,255,0.1) 0%, rgba(255,255,255,0.35) 35%, rgba(255,255,255,0.89) 100%); /* průsvitná bílá */
-    border-radius: 7px;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+ 
+  
     margin: 15px 0;
     padding: 24px;
     width: 100%;
@@ -114,6 +114,8 @@ header {
 
 p {
     color: #555;
+    line-height: 1.6;
+    font-size: 2vh;
 }
 
 .images {
@@ -127,27 +129,13 @@ p {
     width: 100%;
     max-width: 400px;
     height: auto;
-    border-radius: 10px;
+
     aspect-ratio: 4 / 3; /* Nastaví poměr stran 4:3 */
     object-fit: cover; /* Pokud obrázek není ve formátu 4:3, bude oříznut */
-}
-
-/* Umístí progress bar na horní část stránky pod navbar */
-.progress-container {
-    width: 100%;
-    height: 4px;
-    position: fixed; /* nebo 'sticky' podle potřeby */
-    top: 83px; /* nebo výška vašeho navbaru */
-    left: 0;
-    background: #ccc;
-    z-index: 1; /* Ujistěte se, že je nad ostatními prvky */
-}
-
-.progress-bar {
-    height: 4px;
-    background: #74a4d1; /* Změňte barvu podle potřeby */
-    width: 0%;
-    transition: width 0.2s ease-in-out;
+    padding: 2vh;
+    border-radius: 2px; 
+    border: 1px solid black; /* Black bottom border */
+    overflow: hidden; /* Prevents image overflow */
 }
 
 
@@ -171,26 +159,6 @@ p {
     body {
         overflow-x:unset;  /* Zabrání horizontálnímu scrollování */
     }
-    .navbar{
-        padding-right: 0px;  
-         width: 94%;
-    }
-
-    .navbar ul {
-        flex-direction: row;  /* Odkazy budou v řadě */
-        justify-content: flex-start;  /* Odkazy začnou zleva */
-        padding: 0 10px;
-    
-        box-sizing: border-box; /* Aby padding nezvětšil šířku */
-    }
-
-    .navbar li {
-        margin-right: 12px;  /* Přidáme mezeru mezi odkazy */
-    }
-   
-    .progress-container {
-
-        top: 71px; /* nebo výška vašeho navbaru */}
 }
 
 
@@ -263,18 +231,6 @@ p {
         opacity: 0.75; /* Slight transparency */
         pointer-events: none; /* Make birds unclickable */
     }
-    .intro-text {
-        position: absolute;
-        bottom: 20%; /* Positions text in the bottom 30% (90vh * 0.3 = 27vh, so ~15% from bottom) */
-        left: 50%;
-        transform: translate(-50%, 50%); /* Centers text horizontally and adjusts vertical alignment */
-        color: white; /* Ensure text is visible on the image */
-        font-size: 1rem; /* Adjust font size as needed */
-        font-family: 'Roboto Mono', monospace;
-       
-    
-        text-align: center;
-    }
-    
+  
     
 }

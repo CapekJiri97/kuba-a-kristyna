@@ -15,12 +15,7 @@
         <nav class="navbar">
             <ul>
                 <li><a class="logo">Kuba a Kristýna</a></li>
-                <li><a href="#lokalita">Lokalita</a></li>
-                <li><a href="#svatebni-den">Svatební Den</a></li>
-                <li><a href="#ubytovani">Ubytování</a></li>
-                <li><a href="#etiketa">Dresscode</a></li>
-                <li><a href="#kontakty">Kontakty</a></li>
-            </ul>
+           
         </nav>
         <div class="intro-photo-container">
             <img src="svatebni-foto.jpg" alt="Úvodní foto" class="intro-photo">
@@ -31,26 +26,18 @@
         
 
     
-            <!-- Progress bar container -->
-        <div class="progress-container">
-            <div class="progress-bar" id="myBar"></div>
-        </div>
+     
         
     <div class="container">
         <section class="box" id="lokalita">
             <h2>Lokalita</h2>
-            <p>• Obřad proběhne v kostele u Sv. Jana Křtitele v Květově od 11.30 (proklik na mapy).
-            </p>
-            <p>• Hostina bude v Penzionu Fořtovna, Cerhonice. Sem se společně přesuneme auty po obřadu. Cesta zabere asi 15 minut. Penzion samotný je pak ani ne hodinu cesty autem od Prahy, po nově dostavěné dálnici D4.</p>
-            <div class="images">
-                <img src="svatebni-mapa1.jpg" alt="Mapa Sv. Ján" class="lokalita-img">
-             
-            </div>
+            <p>Obřad proběhne v <a href="https://mapy.cz/s/lazukenuhu" target="_blank" style="color: inherit; text-decoration: underline;">kostele</a> u Sv. Jana Křtitele v Květově od 11.30.</p>
+
+            <p>Hostina bude <a href="https://mapy.cz/s/nukerejaga" target="_blank" style="color: inherit; text-decoration: underline;">v Penzionu</a> Fořtovna, Cerhonice. Sem se společně přesuneme auty po obřadu. Cesta zabere asi 15 minut. Penzion samotný je pak ani ne hodinu cesty autem od Prahy, po nově dostavěné dálnici D4.</p>
+
            
-            <p>• Pro přesuny je potřeba mít auto nebo se v několika lidech do auta poskládat. Pokud nemáte k dispozici auto, nebo není ve vašich silách si zajistit odvoz, dejte nám vědět a my Vás s někým spojíme. </p>
-            <div class="images">
-                <img src="svatebni-mapa2.jpg" alt="Mapa Fořtovna" class="lokalita-img">
-            </div>
+            <p>Pro přesuny je potřeba mít auto nebo se v několika lidech do auta poskládat. Pokud nemáte k dispozici auto, nebo není ve vašich silách si zajistit odvoz, dejte nám vědět a my Vás s někým spojíme. </p>
+       
         </section>
         
         <section class="box" id="svatebni-den">
@@ -60,9 +47,9 @@
         
         <section class="box" id="ubytovani">
             <h2>Ubytování</h2>
-            <p>V samotném penzionu je ubytovaná nejbližší rodina a rodinní přátelé. Po dohodě je možné postavit na zahradě vlastní stan. V Cerhonicích je pak také možnost dalšího ubytování v penzionu Furiant po dohodě s námi. Další ubytování je možné hledat v okolí: Zvíkovské Podhradí a Písek. Neměl by být problém dopravit se případně na ubytování taxíkem.</p>
+            <p>V samotném penzionu je ubytovaná nejbližší rodina a rodinní přátelé. Po dohodě s námi je možné postavit na zahradě vlastní stan nebo se ubytovat v nedalekém penzionu Furiant. Další ubytování je možné hledat v okolí: Zvíkovské Podhradí a Písek. Neměl by být problém dopravit se případně na ubytování taxíkem.</p>
             <div class="images">
-                <img src="ubytovani.jpg" alt="Mapa Sv. Ján" class="lokalita-img">
+                <img src="fortovna.jpeg" alt="Mapa Sv. Ján" class="lokalita-img">
              
             </div>
           
@@ -110,16 +97,6 @@
     </div>
 </body>
 <script>
-    window.onscroll = function() {myFunction()};
-
-function myFunction() {
-  var winScroll = document.body.scrollTop || document.documentElement.scrollTop;
-  var height = document.documentElement.scrollHeight - document.documentElement.clientHeight;
-  var scrolled = (winScroll / height) * 100;
-  document.getElementById("myBar").style.width = scrolled + "%";
-}
-
-
 
 const birdImages = [
             'bird1.png', // Path to your first bird image
@@ -132,7 +109,7 @@ const birdImages = [
 
         function addRandomBirds() {
     const container = document.body; // Add birds across the whole page
-    const birdCount = 50; // Number of birds
+    const birdCount = 35; // Number of birds
 
     // Get the full height and width of the document
     const pageHeight = document.documentElement.scrollHeight;
