@@ -137,7 +137,18 @@ p {
     border: 1px solid black; /* Black bottom border */
     overflow: hidden; /* Prevents image overflow */
 }
+.program-img {
+    width: 100%;
+    max-width: 400px;
+    height: auto;
 
+    aspect-ratio: 595 / 840; /* Nastaví poměr stran 4:3 */
+    object-fit: cover; /* Pokud obrázek není ve formátu 4:3, bude oříznut */
+    padding: 2vh;
+    border-radius: 2px; 
+    border: 1px solid black; /* Black bottom border */
+    overflow: hidden; /* Prevents image overflow */
+}
 
 
 /* Mobile first */
